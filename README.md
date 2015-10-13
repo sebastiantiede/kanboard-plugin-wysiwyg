@@ -1,0 +1,1 @@
+# kanboard-plugin-wysiwyg
