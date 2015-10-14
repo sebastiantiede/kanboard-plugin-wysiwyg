@@ -19,4 +19,29 @@ class Plugin extends Base
 
         //$this->template->hook->attach('template:layout:bottom', 'wysiwyg:layout/bottom');
     }
+    public function getPluginName()
+    {
+        return 'WYSIWYG';
+    }
+
+    public function getPluginDescription()
+    {
+        return 'Extension for Kanboard default comment textarea.';
+    }
+
+    public function getPluginAuthor()
+    {
+        return 'Sebastian Tiede';
+    }
+
+    public function getPluginVersion()
+    {
+        return '1.0.0';
+    }
+
+    public function getPluginHomepage()
+    {
+        return 'https://github.com/sebastiantiede/kanboard-plugin-wysiwyg';
+    }
+
 }
