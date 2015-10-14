@@ -1,4 +1,4 @@
-$(window).ready(function() {
+$(window).load(function() {
     $.fn.WYSIWYG = function() {
         var form_comment = this,
             form_comment_clone = form_comment.clone(true),
@@ -8,11 +8,15 @@ $(window).ready(function() {
 
         form_comment.replaceWith(form_comment_container);
 
+        console.log(form_comment_clone.width());
+
         form_comment_clone.markdown({
             autofocus:false,
             savable:false,
             iconlibrary:'fa',
-        });
+            width:form_comment_clone.width(),
+            resize:'horizontal'
+        }).css({width:'100%'});
     };
 
     $('#form-comment').WYSIWYG();
