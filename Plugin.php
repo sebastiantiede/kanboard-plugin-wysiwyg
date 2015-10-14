@@ -16,5 +16,7 @@ class Plugin extends Base
 
         $this->hook->on('template:layout:css', 'plugins/wysiwyg/Asset/css/wysiwyg.css');
         $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/js/wysiwyg.js');
+
+        //$this->template->hook->attach('template:layout:bottom', 'wysiwyg:layout/bottom');
     }
 }
