@@ -8,3 +8,4 @@
 /.sass-cache/
 .DS_Store
 /Asset/bower_components/
+/Asset/.sass-cache/
