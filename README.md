@@ -1,7 +1,7 @@
 Kanboard Markdown WYSIWYG Editor Plugin
 =======================
 
-This plugin override core comment textareas and extents it with common shortcuts like e.g. bold, italic.
+This plugin overrides core comment textareas and extends it with common shortcuts like bold, italic.
 
 Installation
 ------------
@@ -18,7 +18,7 @@ Dependencies
 - [Bootstrap](https://github.com/twbs/bootstrap)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 
-Use bower for installation.
+Use Bower for installation.
 
 Screenshot
 ----------
