@@ -14,9 +14,7 @@ Installation
 Dependencies
 ----------
 
-- [Bootstrap Markdown](https://github.com/toopay/bootstrap-markdown)
-- [Bootstrap](https://github.com/twbs/bootstrap)
-- [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
+- [meltdown](https://github.com/iphands/Meltdown)
 
 Use Bower for installation.
 

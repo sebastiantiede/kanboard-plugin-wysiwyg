@@ -1,28 +1,42 @@
 $(window).load(function() {
+    var controlsGroup = function(name, label, controls) {
+        controls.name = name;
+        controls.label = label;
+        return controls;
+    };
+
     $.fn.WYSIWYG = function() {
         this.each(function() {
-            var form_comment = $(this),
-                form_comment_clone = form_comment.clone(true),
-                form_comment_container = $('<div class="kanboard-bootstrap-markdown-container"></div>').append(form_comment_clone);
-
-            form_comment.closest('.form-tabs').find('>.form-tabs-nav').hide();
-
-            form_comment.replaceWith(form_comment_container);
-
-            form_comment_clone.markdown({
-                autofocus:false,
-                savable:false,
-                iconlibrary:'fa',
-                width:form_comment_clone.width(),
-                resize:'horizontal'
-            }).css({width:'100%'});
+            $(this).meltdown({
+                controls: controlsGroup('','',[
+                    //"preview",
+                    "bold",
+                    "italics",
+                    "ul",
+                    "ol",
+                    "|",
+                    "table",
+                    controlsGroup("h", "Headers", ["h1", "h2", "h3", "h4", "h5", "h6"]),
+                    "|",
+                    controlsGroup("kitchenSink", "Kitchen Sink", [
+                        "link",
+                        "img",
+                        "blockquote",
+                        "codeblock",
+                        "code",
+                        "footnote",
+                        "hr"
+                    ]),
+                    "fullscreen",
+                    "sidebyside"
+                ])
+            });
         });
     };
 
     $('#form-comment,#form-description').WYSIWYG();
 
     $(document).on("click", ".popover", function() {
-        console.log($('#popover-container'));
         ifTextareaNotExists('#form-description');
     });
 
