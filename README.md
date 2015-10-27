@@ -11,15 +11,22 @@ Installation
 - Go on your local installation of Kanboard
 - After the login, you should see the alterations to the default layout
 
-Dependencies
-----------
-
-- [meltdown](https://github.com/iphands/Meltdown)
-
-Use Bower for installation.
-
-Screenshot
-----------
-
-![Kanboard Markdown WYSIWYG Editor Plugin](https://cloud.githubusercontent.com/assets/6308134/10492622/540942b8-72ad-11e5-902a-b9b06c7cd4a9.png)
-
+# Dependencies
+ 
+[Meltdown](https://github.com/iphands/Meltdown)
+ 
+# Installation
+ 
+Create a directory **"wysiwyg"** in the kanboard/plugins directory. It is important to use that exact name!  
+[Download the Sourcecode](https://github.com/sebastiantiede/kanboard-plugin-wysiwyg/archive/master.zip)
+Extract the **source files** into the created directory.
+ 
+Install **Bower** with NPM.
+1. Download [NodeJS/NPM](https://nodejs.org/).
+2. Use NPM to install Bower: `$ npm install -g bower` - [Additional help](https://www.npmjs.com/package/bower)
+3. Install [Git](https://git-scm.com/downloads)
+ 
+Install the **bower.json** with Bower. This will install Meltdown and all of Meltdowns dependencies:
+1. `bower install bower.json`
+ 
+## Done!
