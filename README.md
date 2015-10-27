@@ -13,7 +13,7 @@ Installation
 
 # Dependencies
  
-[Meltdown](https://github.com/iphands/Meltdown)
+[pagedown](https://github.com/ujifgc/pagedown)
  
 # Installation
  
@@ -26,7 +26,7 @@ Install **Bower** with NPM.
 2. Use NPM to install Bower: `$ npm install -g bower` - [Additional help](https://www.npmjs.com/package/bower)
 3. Install [Git](https://git-scm.com/downloads)
  
-Install the **bower.json** with Bower. This will install Meltdown and all of Meltdowns dependencies:
+Install the **bower.json** with Bower. This will install pagedown:
 1. `bower install bower.json`
  
 ## Done!

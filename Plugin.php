@@ -7,12 +7,10 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/jquery.meltdown.js');
-        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/lib/js-markdown-extra.js');
-        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/lib/rangyinputs-jquery.min.js');
-        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/lib/element_resize_detection.js');
-
-        $this->hook->on('template:layout:css', 'plugins/wysiwyg/Asset/bower_components/meltdown/css/meltdown.css');
+        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/pagedown/Markdown.Converter.js');
+        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/pagedown/Markdown.Editor.js');
+        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/pagedown/Markdown.Extra.js');
+        $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/pagedown/Markdown.Sanitizer.js');
 
         $this->hook->on('template:layout:css', 'plugins/wysiwyg/Asset/css/wysiwyg.css');
         $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/js/wysiwyg.js');
@@ -34,7 +32,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.1.0';
+        return '2.0.0';
     }
 
     public function getPluginHomepage()

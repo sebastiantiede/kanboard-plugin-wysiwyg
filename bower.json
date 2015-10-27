@@ -2,6 +2,6 @@
     "name": "wysiwyg",
     "private": true,
     "dependencies": {
-        "meltdown":"latest"
+        "pagedown":"latest"
     }
 }

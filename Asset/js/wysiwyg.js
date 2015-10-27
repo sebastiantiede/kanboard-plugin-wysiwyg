@@ -6,8 +6,19 @@ $(window).load(function() {
     };
 
     $.fn.WYSIWYG = function() {
+
+
+       //  class="wmd-input" id="wmd-input"
+
         this.each(function() {
-            $(this).meltdown({
+            $(this).before('<div id="wmd-button-bar"></div>');
+
+            $(this).addClass('wmd-input').attr({id:'wmd-input'});
+            var converter = new Markdown.Converter();
+            var editor = new Markdown.Editor(converter);
+            editor.run();
+
+            /*$(this).meltdown({
                 controls: controlsGroup('','',[
                     //"preview",
                     "bold",
@@ -30,8 +41,9 @@ $(window).load(function() {
                     "fullscreen",
                     "sidebyside"
                 ])
-            });
+            });*/
         });
+
     };
 
     $('#form-comment,#form-description').WYSIWYG();
