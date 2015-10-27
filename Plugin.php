@@ -1,19 +1,12 @@
 <?php
 
-namespace Plugin\wysiwyg;
-use Core\Plugin\Base;
+namespace Kanboard\Plugin\wysiwyg;
+use Kanboard\Core\Plugin\Base;
 
 class Plugin extends Base
 {
     public function initialize()
     {
-        //$this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/bootstrap/dist/js/bootstrap.min.js');
-        //$this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/markdown/lib/markdown.js');
-        //$this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/bootstrap-markdown/js/bootstrap-markdown.js');
-
-        //$this->hook->on('template:layout:css', 'plugins/wysiwyg/Asset/bower_components/bootstrap-markdown/css/bootstrap-markdown.min.css');
-        //$this->hook->on('template:layout:css', 'plugins/wysiwyg/Asset/bower_components/font-awesome/css/font-awesome.min.css');
-
         $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/jquery.meltdown.js');
         $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/lib/js-markdown-extra.js');
         $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/bower_components/meltdown/js/lib/rangyinputs-jquery.min.js');
@@ -23,8 +16,6 @@ class Plugin extends Base
 
         $this->hook->on('template:layout:css', 'plugins/wysiwyg/Asset/css/wysiwyg.css');
         $this->hook->on('template:layout:js', 'plugins/wysiwyg/Asset/js/wysiwyg.js');
-
-        //$this->template->hook->attach('template:layout:bottom', 'wysiwyg:layout/bottom');
     }
     public function getPluginName()
     {
