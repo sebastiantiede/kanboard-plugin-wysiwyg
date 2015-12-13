@@ -1,70 +1,21 @@
-$(window).load(function() {
-    var controlsGroup = function(name, label, controls) {
-        controls.name = name;
-        controls.label = label;
-        return controls;
-    };
-
+$(window).ready(function() {
     $.fn.WYSIWYG = function() {
-
-
-       //  class="wmd-input" id="wmd-input"
-
         this.each(function() {
-            $(this).before('<div id="wmd-button-bar"></div>');
-
-            $(this).addClass('wmd-input').attr({id:'wmd-input'});
-            var converter = new Markdown.Converter();
-            var editor = new Markdown.Editor(converter);
+            $(this)
+                .before('<div id="wmd-button-bar"></div>')
+                .addClass('wmd-input')
+                .attr({id:'wmd-input'});
+            var converter = new Markdown.Converter(),
+                editor = new Markdown.Editor(converter);
             editor.run();
-
-            /*$(this).meltdown({
-                controls: controlsGroup('','',[
-                    //"preview",
-                    "bold",
-                    "italics",
-                    "ul",
-                    "ol",
-                    "|",
-                    "table",
-                    controlsGroup("h", "Headers", ["h1", "h2", "h3", "h4", "h5", "h6"]),
-                    "|",
-                    controlsGroup("kitchenSink", "Kitchen Sink", [
-                        "link",
-                        "img",
-                        "blockquote",
-                        "codeblock",
-                        "code",
-                        "footnote",
-                        "hr"
-                    ]),
-                    "fullscreen",
-                    "sidebyside"
-                ])
-            });*/
         });
-
     };
 
-    $('#form-comment,#form-description').WYSIWYG();
-
-    $(document).on("click", ".popover", function() {
-        ifTextareaNotExists('#form-description');
+    $(window).ajaxSuccess(function(event, request, settings) {
+        if(settings.url.match(/controller=taskcreation/)) {
+            $('#form-description').WYSIWYG();
+        }
     });
 
-    var i=0;
-    function ifTextareaNotExists(selector) {
-        var textarea = $(selector);
-        console.log(textarea,textarea.length,i);
-        if(!textarea.length&&i<10) {
-            setTimeout(function() {
-                ifTextareaNotExists(selector);
-            },100);
-        } else {
-            textarea.WYSIWYG();
-        }
-        i++;
-    }
-
-
+    $('#form-comment,#form-description').WYSIWYG();
 });
