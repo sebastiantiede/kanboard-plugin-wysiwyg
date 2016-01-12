@@ -27,6 +27,6 @@ Install **Bower** with NPM.
 3. Install [Git](https://git-scm.com/downloads)
  
 Install the **bower.json** with Bower. This will install pagedown:
-1. `bower install bower.json`
+1. `bower install`
  
 ## Done!
