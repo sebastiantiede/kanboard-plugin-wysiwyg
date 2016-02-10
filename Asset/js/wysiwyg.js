@@ -12,8 +12,9 @@ $(window).ready(function() {
     };
 
     $(window).ajaxSuccess(function(event, request, settings) {
-        if(settings.url.match(/controller=taskcreation/)) {
-            $('#form-description').WYSIWYG();
+        console.log(settings.url,settings.url.match(/controller=comment/));
+        if(settings.url.match(/controller=taskcreation/) || settings.url.match(/controller=comment/)) {
+            $('#form-description,#form-comment').WYSIWYG();
         }
     });
 
