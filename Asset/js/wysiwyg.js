@@ -1,4 +1,5 @@
 $(window).ready(function() {
+    console.log('wysiwyg');
     $.fn.WYSIWYG = function() {
         this.each(function() {
             $(this)
@@ -12,9 +13,11 @@ $(window).ready(function() {
     };
 
     $(window).ajaxSuccess(function(event, request, settings) {
-        console.log(settings.url,settings.url.match(/controller=comment/));
-        if(settings.url.match(/controller=taskcreation/) || settings.url.match(/controller=comment/)) {
-            $('#form-description,#form-comment').WYSIWYG();
+        if(
+            settings.url.match(/controller=taskmodification/) ||
+            settings.url.match(/controller=taskcreation/) || 
+            settings.url.match(/controller=comment/)) {
+            $('#form-description,#form-comment,#form-description').WYSIWYG();
         }
     });
 
