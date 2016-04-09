@@ -1,6 +1,12 @@
 Kanboard Markdown WYSIWYG Editor Plugin
 =======================
 
+----
+
+_Note: It's no longer in active development, and it's part of the Kanboard core since version 1.0.27._
+
+----
+
 This plugin overrides core comment textareas and extends it with common shortcuts like bold, italic.
 
 Installation
